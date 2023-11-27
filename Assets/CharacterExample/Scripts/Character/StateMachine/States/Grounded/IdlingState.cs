@@ -1,3 +1,5 @@
+using CharacterExample.Scripts.Character.StateMachine.States.Grounded;
+
 public class IdlingState : GroundedState
 {
     public IdlingState(IStateSwitcher stateSwitcher, StateMachineData data, Character character) : base(stateSwitcher, data, character)
@@ -25,6 +27,6 @@ public class IdlingState : GroundedState
         if (IsHorizontalInputZero())
             return;
 
-        StateSwitcher.SwitchState<RunningState>();
+        StateSwitcher.SwitchState<DefaultMovingState>();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using CharacterExample.Scripts.Character.StateMachine.States.Grounded;
 
 public class CharacterStateMachine: IStateSwitcher
 {
@@ -13,7 +14,9 @@ public class CharacterStateMachine: IStateSwitcher
         _states = new List<IState>()
         {
             new IdlingState(this, data, character),
-            new RunningState(this, data, character),
+            new DefaultMovingState(this, data, character),
+            new WalkingState(this, data, character),
+            new SprintingState(this, data, character),
             new JumpingState(this, data, character),
             new FallingState(this, data, character),
         };

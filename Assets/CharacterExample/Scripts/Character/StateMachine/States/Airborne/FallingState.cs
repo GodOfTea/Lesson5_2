@@ -1,3 +1,5 @@
+using CharacterExample.Scripts.Character.StateMachine.States.Grounded;
+
 public class FallingState : AirborneState
 {
     private readonly GroundChecker _groundChecker;
@@ -31,7 +33,7 @@ public class FallingState : AirborneState
             if (IsHorizontalInputZero())
                 StateSwitcher.SwitchState<IdlingState>();
             else
-                StateSwitcher.SwitchState<RunningState>();
+                StateSwitcher.SwitchState<DefaultMovingState>();
         }
     }
 }

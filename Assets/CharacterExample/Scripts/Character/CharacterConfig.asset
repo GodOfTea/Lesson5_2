@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: CharacterConfig
   m_EditorClassIdentifier: 
   _runningStateConfig:
-    _speed: 7
+    _speed: 5
+    _walkingModifier: 0.5
+    _fastRunModifier: 2
   _airborneStateConfig:
     _jumpingStateConfig:
       _maxHeight: 5
